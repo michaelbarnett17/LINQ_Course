@@ -1,4 +1,4 @@
-﻿using Ch_0_LINQ_Query;
+﻿using Ch_0_Class_Library;
 
 List<Person> people = new List<Person>() {
                 new Person("Tod", "Vachev", 1, 180, 26, Gender.Male),

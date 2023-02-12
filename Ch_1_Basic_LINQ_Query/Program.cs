@@ -1,4 +1,4 @@
-﻿using Ch_0_LINQ_Query;
+﻿using Ch_0_Class_Library;
 
 // 1) SOURCE - from x in collection_of_x
 // 2) CONDITIONS - where x > something
