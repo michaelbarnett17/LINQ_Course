@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch_3_Query_Joining", "Ch_3_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch_4_Method_Syntax", "Ch_4_Method_Syntax\Ch_4_Method_Syntax.csproj", "{19F20B81-EB9B-4004-917E-0FCDCCDBAF64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch_5_Method_Joining", "Ch_5_Method_Joining\Ch_5_Method_Joining.csproj", "{56B015EE-A704-4A4A-BB91-99763CC1C56C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch_5_Method_Grouping", "Ch_5_Method_Grouping\Ch_5_Method_Grouping.csproj", "{E6064612-9801-4237-A6B0-B693D66222A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{19F20B81-EB9B-4004-917E-0FCDCCDBAF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F20B81-EB9B-4004-917E-0FCDCCDBAF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F20B81-EB9B-4004-917E-0FCDCCDBAF64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56B015EE-A704-4A4A-BB91-99763CC1C56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56B015EE-A704-4A4A-BB91-99763CC1C56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56B015EE-A704-4A4A-BB91-99763CC1C56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56B015EE-A704-4A4A-BB91-99763CC1C56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6064612-9801-4237-A6B0-B693D66222A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6064612-9801-4237-A6B0-B693D66222A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6064612-9801-4237-A6B0-B693D66222A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6064612-9801-4237-A6B0-B693D66222A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
