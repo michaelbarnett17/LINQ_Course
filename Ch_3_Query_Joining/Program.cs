@@ -1,4 +1,5 @@
-﻿using Ch_0_Class_Library;
+﻿using My_Utility;
+using My_Class_Library;
 
 List<Buyer> buyers = new List<Buyer>()
 {
@@ -28,22 +29,15 @@ List<Supplier> suppliers = new List<Supplier>()
 var innerJoin = from b in buyers
                 join s in suppliers
                 on b.District equals s.District
-                orderby s.District
+                orderby b.District
                 select new {
 
-                    SupplierName = s.Name,
                     BuyerName = b.Name,
+                    SupplierName = s.Name,
                     District = b.District
                 };
 
-foreach (var item in innerJoin) {
-
-    Console.WriteLine(item);
-
-}
-
-
-Console.WriteLine();
+MyConsole.PrintLine(innerJoin);
 
 // INNER JOIN BY COMPOSITE KEY 
 // MATCH BY DISTRICT AND AGE
@@ -53,6 +47,7 @@ var compositeJoin = from b in buyers
                    join s in suppliers
                    on new {b.District, b.Age} equals new {s.District, s.Age}
                    select new {
+                       // can make whatever you want note how Supplier vs BuyerName
                        Supplier = s,
                        BuyerName = b.Name,
                    };
@@ -138,6 +133,5 @@ foreach (var item in leftOuterJoin) {
 
         Console.WriteLine($"{buyer.District} {buyer.Name}");
     }
-
 
 }

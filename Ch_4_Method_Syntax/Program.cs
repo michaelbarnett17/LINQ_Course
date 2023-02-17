@@ -1,4 +1,5 @@
-﻿using Ch_0_Class_Library;
+﻿using My_Utility;
+using My_Class_Library;
 
 // INPUT => OUTPUT
 // (INPUT) => (WORK ON THE INPUT)
@@ -22,13 +23,7 @@ List<Warrior> warriors = new List<Warrior>()
 // n iterates on the numbers collection
 var oddNumbers = numbers.Where(n => n % 2 == 1);
 
-foreach(var n in oddNumbers) {
-
-    Console.Write($"{n}, ");
-
-}
-
-Console.WriteLine();
+MyConsole.Print(oddNumbers);
 
 // DIFFERENCE BETWEEN SELECT AND WHERE
 
@@ -41,28 +36,9 @@ var shortWarriors2 = warriors.Where(w => w.Height < 90).Select(w => w.Height);
 // 3) YOU PROBABLY DON'T WANT TO DO THIS! RETURNS COLLECTION OF TRUE AN FALSE
 var shortWarriors3 = warriors.Select(w => w.Height < 90);
 
-
-
-foreach (var w in shortWarriors1) {
-
-    Console.Write($"{w}, ");
-
-}
-Console.WriteLine();
-
-foreach (var w in shortWarriors2) {
-
-    Console.Write($"{w}, ");
-
-}
-Console.WriteLine();
-
-foreach (var w in shortWarriors3) {
-
-    Console.Write($"{w}, ");
-
-}
-Console.WriteLine();
+MyConsole.Print(shortWarriors1);
+MyConsole.Print(shortWarriors2);
+MyConsole.Print(shortWarriors3);
 
 // CAN TRANSFORM IEnumbrable TO LIST USING .ToList()
 // .ToList() works like a foreach
@@ -70,13 +46,7 @@ var shortWarriorsList = warriors.Where(w => w.Height < 90)
                                 .Select(w => w.Height)
                                 .ToList();
 
-foreach (var w in shortWarriorsList) {
-
-    Console.Write($"{w}, ");
-
-}
-Console.WriteLine();
-
+MyConsole.Print(shortWarriorsList);
 
 // ForEach
 warriors.ForEach(w => Console.Write($"{w.Height}, "));

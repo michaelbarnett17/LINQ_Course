@@ -1,4 +1,5 @@
-﻿using Ch_0_Class_Library;
+﻿using My_Utility;
+using My_Class_Library;
 
 // 1) SOURCE - from x in collection_of_x
 // 2) CONDITIONS - where x > something
@@ -16,15 +17,8 @@ var numbersGreaterThanSeven = from number in numbers
 
 numbers[0] = 16;
 
-// EXECUTES NOW
-foreach (var n in numbersGreaterThanSeven) {
-
-    Console.Write($"{n}, ");
-
-}
-
-
-Console.WriteLine("\n");
+// EXECUTES NOW (WHEN IENUMERABLE IS ITERATED OVER OR WHEN .ToList() IS CALLED
+MyConsole.Print(numbers);
 
 
 string[] catNames = { "Lucky", "Bella", "Luna", "Oreo", "Simba", "Toby", "Loki", "Oscar" };
@@ -33,14 +27,7 @@ var catsWithA = from cat in catNames
                 where cat.Contains("A") && cat.Length < 5
                 select cat;
 
-foreach (var c in catNames) {
-
-    Console.Write($"{c}, ");
-
-}
-
-Console.WriteLine();
-Console.WriteLine();
+MyConsole.Print(catNames);
 
 
 List<Person> people = new List<Person>() {
@@ -64,36 +51,15 @@ var forCharPeople = from p in people
                     orderby p.Height descending, p.ID
                     select p;
 
-foreach (var item in forCharPeople) {
-
-    Console.Write($"{item.FirstName}, ");
-
-}
-
-
-
-Console.WriteLine("\n");
-
-
+MyConsole.Print(forCharPeople);
 
 var forCharPeopleNames = from p in people
                          where p.FirstName.Length == 4
                          select p.FirstName;
 
-foreach (var item in forCharPeopleNames) {
-
-    Console.Write($"{item}, ");
-
-}
-
-
-
-Console.WriteLine("\n");
-
-
+MyConsole.Print(forCharPeopleNames);
 
 // CREATE NEW OBJECTS FROM OLD OBJECTS
-
 var youngPeople = from p in people
                   where p.Age < 25
                   select new YoungPerson(
@@ -108,12 +74,7 @@ foreach (var item in youngPeople) {
     Console.WriteLine($"{item.FullName} is {item.Age} years old.");
 
 }
-
-
-
 Console.WriteLine();
-
-
 
 // USE LET KEYWORD TO DEFINE VARIABLES IN LINQ QUERY
 
@@ -127,8 +88,6 @@ foreach (var item in peopleWithA) {
     Console.WriteLine($"{item.FirstName} {item.LastName} is {item.Age} years old.");
 
 }
-
-
 Console.WriteLine();
 
 
@@ -150,9 +109,4 @@ var allNumbers = from l in list
                  from n in numbersList
                  select n;
 
-foreach (var n in allNumbers) {
-
-    Console.Write($"{n}, ");
-
-}
-
+MyConsole.Print(allNumbers);

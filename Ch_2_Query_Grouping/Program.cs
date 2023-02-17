@@ -1,4 +1,5 @@
-﻿using Ch_0_Class_Library;
+﻿using My_Utility;
+using My_Class_Library;
 
 List<Person> people = new List<Person>() {
                 new Person("Tod", "Vachev", 1, 180, 26, Gender.Male),
@@ -19,8 +20,6 @@ List<Person> people = new List<Person>() {
 // LINQ QUERY CAN END WITH EITHER A GROUP CLAUSE OR A SELECT CLAUSE
 var genderGroup = from p in people
                   group p by p.Gender;
-
-Console.WriteLine();
 
 // GROUP CLAUSE RETURNS IEnumerable<Grouping<Gender, Person>>
 // GROUPING IMPLEMENTS IEnumerable, SO YOU HAVE IEnumerable<IEnumerable>

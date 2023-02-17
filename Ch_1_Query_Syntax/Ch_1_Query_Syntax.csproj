@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ch_0_Class_Library\Ch_0_Class_Library.csproj" />
+    <ProjectReference Include="..\My_Class_Library\My_Class_Library.csproj" />
+    <ProjectReference Include="..\My_Utility\My_Utility.csproj" />
   </ItemGroup>
 
 </Project>
